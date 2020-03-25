@@ -43,7 +43,7 @@ but at the moment I won't recommend to use it on any other.
 
 Linux (tested with Ubuntu 16.04)
 
-ROS Kinetic with OpenCV 3.3.1
+ROS Kinetic
 
 -> Refer to http://wiki.ros.org/kinetic/Installation
 

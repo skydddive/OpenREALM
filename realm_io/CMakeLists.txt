@@ -4,7 +4,7 @@ project(realm_io)
 find_package(catkin REQUIRED COMPONENTS
         realm_core
         )
-find_package(OpenCV 3.3.1 EXACT)
+find_package(OpenCV 3.2)
 find_package(cmake_modules REQUIRED)
 find_package(Exiv2)
 find_package(GDAL REQUIRED)

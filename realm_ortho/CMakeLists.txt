@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(realm_ortho)
 
-find_package(OpenCV 3.3.1 EXACT)
+find_package(OpenCV 3.2)
 find_package(CGAL REQUIRED)
 find_package(cmake_modules REQUIRED)
 find_package(catkin REQUIRED COMPONENTS
