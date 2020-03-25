@@ -55,11 +55,25 @@ QT5 for RVIZ plugin
 
 -> Refer to http://doc.qt.io/qt-5/qt5-intro.html
 
-Exiv2 installation from source for image reading and writing with meta infos
-
--> https://github.com/Exiv2/exiv2
+Exiv2 installation from source for image reading and writing with meta infos. 
 
 ```sh
+# For 16.04 we need an older version of Exiv2, so checkout the correct version.
+git clone https://github.com/Exiv2/exiv2.git
+cd exiv2
+git checkout 0.26 
+mkdir build && cd build
+cmake ..
+make
+sudo make install
+
+# It is sometimes hard to find by cmake, for some reason the .deb is also necessary.
+sudo apt-get install libexiv2-14
+```
+
+```sh
+
+
 # Catkin tools for build process
 sudo apt-get install python-catkin-tools
 
