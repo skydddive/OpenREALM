@@ -73,6 +73,7 @@ sudo apt-get install libexiv2-14
 
 ```sh
 
+Other dependencies from the PPA
 
 # Catkin tools for build process
 sudo apt-get install python-catkin-tools
