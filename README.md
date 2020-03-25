@@ -105,7 +105,7 @@ CUDA for stereo reconstruction with plane sweep lib
 
 Please note, that installing CUDA can sometimes be troublesome. If you are facing an error like 
 ```sh
-*fatal error: cuda_runtime.h: No such file or directory*
+fatal error: cuda_runtime.h: No such file or directory
 ```
 often times adding the CUDA directory to the .bashrc does the trick. If you use CUDA 9.0 for example, you should 
 ```sh
