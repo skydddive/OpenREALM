@@ -63,6 +63,10 @@ Exiv2 installation from source for image reading and writing with meta infos
 # Catkin tools for build process
 sudo apt-get install python-catkin-tools
 
+# Additional ROS package dependencies
+sudo apt-get install ros-kinetic-geographic-msgs
+sudo apt-get install ros-kinetic-geodesy
+
 # Eigen3 for several linear algebra problems
 sudo apt-get install libeigen3-dev
 
