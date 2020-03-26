@@ -18,6 +18,8 @@
 * along with OpenREALM. If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include <realm_common/loguru.hpp>
+
 #include <realm_stages/ortho_rectification.h>
 
 using namespace realm;
@@ -38,6 +40,9 @@ OrthoRectification::OrthoRectification(const StageSettings::Ptr &stage_set)
 
 void OrthoRectification::addFrame(const Frame::Ptr &frame)
 {
+  // First update statistics about incoming frame rate
+  updateFpsStatisticsIncoming();
+
   if (!frame->hasObservedMap())
   {
     LOG_F(INFO, "Input frame has no surface informations. Dropping...");
@@ -125,6 +130,9 @@ void OrthoRectification::saveIter(const CvGridMap& map, uint8_t zone, uint32_t i
 
 void OrthoRectification::publish(const Frame::Ptr &frame)
 {
+  // First update statistics about outgoing frame rate
+  updateFpsStatisticsOutgoing();
+
   _transport_frame(frame, "output/frame");
   _transport_img((*frame->getObservedMap())["color_rgb"], "output/rectified");
 
